@@ -1,0 +1,26 @@
+﻿<Window x:Class="t10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:t10"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="clientList" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,10,485,10" SelectionChanged="clientList_SelectionChanged"/>
+        <Grid Margin="320,10,10,10">
+            <TextBox x:Name="fullName" Margin="0,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="230"/>
+            <TextBox x:Name="phoneNumber" Margin="0,33,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="230"/>
+            <TextBox x:Name="passNumber" Margin="0,56,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="230"/>
+            <Button x:Name="setButton" Content="Изменить" Margin="0,79,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="230" Click="setButton_Click"/>
+            <Label Content="Ф.И.О." Margin="0,6,245,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.002" HorizontalAlignment="Right" Width="45"/>
+            <Label Content="Номер телефона" Margin="0,29,245,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.002" HorizontalAlignment="Right" Width="103"/>
+            <Label Content="Паспортные данные" Margin="0,52,245,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.002" HorizontalAlignment="Right" Width="122"/>
+            <ComboBox x:Name="selectedRole" Margin="0,0,10,10" HorizontalAlignment="Right" Width="215" Height="22" VerticalAlignment="Bottom" SelectedIndex="1" SelectionChanged="selectedRole_SelectionChanged">
+                <ComboBoxItem Content="Консультант"/>
+                <ComboBoxItem Content="Менеджер"/>
+            </ComboBox>
+        </Grid>
+
+    </Grid>
+</Window>
