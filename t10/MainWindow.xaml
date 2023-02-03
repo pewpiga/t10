@@ -16,10 +16,6 @@
             <Label Content="Ф.И.О." Margin="0,6,245,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.002" HorizontalAlignment="Right" Width="45"/>
             <Label Content="Номер телефона" Margin="0,29,245,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.002" HorizontalAlignment="Right" Width="103"/>
             <Label Content="Паспортные данные" Margin="0,52,245,0" VerticalAlignment="Top" RenderTransformOrigin="0.658,0.002" HorizontalAlignment="Right" Width="122"/>
-            <ComboBox x:Name="selectedRole" Margin="0,0,10,10" HorizontalAlignment="Right" Width="215" Height="22" VerticalAlignment="Bottom" SelectedIndex="1" SelectionChanged="selectedRole_SelectionChanged">
-                <ComboBoxItem Content="Консультант"/>
-                <ComboBoxItem Content="Менеджер"/>
-            </ComboBox>
         </Grid>
 
     </Grid>

@@ -8,7 +8,7 @@ namespace t10
 {
     internal class Consultant : Employee, IConsultant
     {
-        private string editor;
+        public string editor { get; set; }
         public Consultant()
         {
             editor = "consultant";

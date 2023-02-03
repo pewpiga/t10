@@ -23,27 +23,24 @@ namespace t10
     {
         private string jsonPath = "clients.json";
         private int index;
-        private string role;
         private List<Client> clients;
         private Operations operations;
         private ReadWrite rw;
-        public MainWindow()
+        public MainWindow(string role)
         {
             InitializeComponent();
-
-            role = selectedRole.Text;
 
             rw = new ReadWrite(jsonPath);
             if (!File.Exists(jsonPath))
             {
                 rw.Initialize(clients, clientList);
+                clients = rw.Read();
             }
             else
             {
                 clients = rw.Read();
                 rw.Initialize(clients, clientList);
             }
-            rw.Initialize(clients, clientList);
 
             operations = new Operations(role, clients, clientList);
         }
@@ -58,22 +55,6 @@ namespace t10
         {
             operations.SetClientData(rw, index, fullName, phoneNumber, passNumber);
             clients = rw.Read();
-        }
-
-        private void selectedRole_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if(selectedRole.SelectedIndex == 0)
-            {
-                fullName.IsEnabled = true;
-                phoneNumber.IsEnabled = true;
-                passNumber.IsEnabled = true;
-            }
-            else if (selectedRole.SelectedIndex == 1)
-            {
-                fullName.IsEnabled = true;
-                phoneNumber.IsEnabled = true;
-                passNumber.IsEnabled = true;
-            }
         }
     }
 }

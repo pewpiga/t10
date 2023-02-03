@@ -8,9 +8,10 @@ namespace t10
 {
     internal class Manager : Consultant, IManager
     {
-        private string editor;
+        public string editor { get; set; }
         public Manager()
         {
+            base.editor = "manager";
             editor = "manager";
         }
         public void ChangeFullName(Client client, string fullName)
