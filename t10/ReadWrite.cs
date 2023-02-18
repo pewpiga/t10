@@ -76,8 +76,8 @@ namespace t10
             if (!File.Exists(_path))
             {
                 _clientList = _generator.ClientListGenerator(30);
-                Write();
-                ListBoxAddItem(clients, clientList);
+                Write(_clientList);
+                ListBoxAddItem(_clientList, clientList);
             }
             else
                 ListBoxAddItem(clients, clientList);
